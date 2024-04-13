@@ -1,0 +1,217 @@
+%doc-size
+\documentclass[a4paper,12pt]{article}
+
+%packages
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+\usepackage{tabularray}
+
+%for lists within the experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+%to prevent spillover of tabular into next pages
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colors for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug outer page frames
+%\usepackage{showframe}
+
+%photo
+\begin{document}
+\parbox{2.3cm}{%
+\centering
+\includegraphics[width=2.3cm,clip]{assets\logo.png}
+}\parbox{\dimexpr\linewidth-2.4cm\relax}{
+\begin{tabularx}{\linewidth}{L R}
+  \textbf {\LARGE Shrijal} & \href{tel:+919835631444}{\raisebox{-0.05\height}\faMobile \ +91-9835631444}\\
+  
+  Bachelor of Technology &  \href{mailto:shrijal2410@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ shrijal2410@gmail.com}\\
+   {Mechatronics Engineering} &  \href{https://github.com/Shrijal2410}{\raisebox{-0.05\height}\faGithub\ Shrijal2410} \textbar \hspace{1pt} \href{https://www.linkedin.com/in/Shrijal2410/}{\raisebox{-0.05\height}\faLinkedin\ Shrijal}\\
+  {Indian Institute of Information Technology, Bhagalpur- 813210} & \href{https://shrijal2410.github.io/Web-Development/}{\raisebox{-0.05\height}\faGlobe \ mysite.com}
+\end{tabularx}
+}
+\vspace{-2mm}
+
+% non-numbered pages
+\pagestyle{empty}
+
+%Education
+\titleformat{\section}{\Large\scshape\raggedright}{}{}{}
+\titlespacing{\section}{0pt}{10pt}{5pt}
+\section*{Education}
+\begin{tabularx}{\textwidth}{lCXCr}
+  \hline
+  \textbf{Examination} & \textbf{Affiliation} & \textbf{Institute} & \textbf{Year} & \textbf{CGPA/Percentage} \\
+  \hline
+  Graduation (ongoing) & IIIT-BH              & IIIT Bhagalpur     & 2021-25       & 7.98                     \\
+  Intermediate(+2)     & CBSE                 & CPS Bhagalpur      & 2019-20       & 82.4\%                   \\
+  Matriculation        & CBSE                 & SVM Munger         & 2017-18       & 83.8\%                   \\
+  \hline
+\end{tabularx}
+
+%Experience
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+\section{Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+  \textbf{Tata Prashikshan Internship}- {Tata Steel Ltd., Jamshedpur} & \hfill Jun-July'23 \\[2pt]
+  \multicolumn{2}{@{}X@{}}{
+  \begin{minipage}[t]{\linewidth}
+    \textit{Mechanical Intern}
+    \begin{itemize}
+      \item Implemented heat recovery techniques in steelmaking processes to enhance energy efficiency, resulting in significant cost savings and reduced environmental impact.
+       \item Successfully led initiatives to optimize heat utilization, including waste heat recovery systems and gas-to-energy projects, driving operational efficiency and sustainable practices in steel production.
+    \end{itemize}
+  \end{minipage}
+  }
+\end{tabularx}
+
+
+%Projects
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+\section{Projects}
+
+%Robotic Arm
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+  \textbf{Robotic Arm} & \hfill Robo-Quest $|$ Amalthea'22, IITGN \\[2pt]
+  \multicolumn{2}{@{}X@{}}{
+  \begin{minipage}[t]{\linewidth}
+    \begin{itemize}
+      \item A robotic arm that can accurately touch a point on a wall and enter an alphanumeric sequence on a keyboard, using computer vision. It will be controlled using an Arduino and GRBL, and will use machine learning to improve its accuracy and efficiency over time.\vspace{-1em} \\
+      %Probozance
+      \begin{flushright} Probozance $|$ Cognizance'23, IITR \end{flushright}
+      \item A rover with a robotic arm capable of navigating terrain, drilling into the surface, collecting and analyzing soil samples using computer vision, and communicating with a base station. Utilized GRBL for precise drill location and integrated AI and ROS for autonomous navigation.\vspace{-1em} \\
+      %Ware-Wizard
+      \begin{flushright} Ware-Wizard $|$ Cognizance'23, IITR \end{flushright}
+      \item An autonomous robotic arm for warehouse tasks, utilizing computer vision techniques such as color and letter detection through OpenCV, and navigation through ROS. Implemented a sensor array for real-time obstacle avoidance, resulting in increased efficiency and safety.
+    \end{itemize}
+  \end{minipage}
+  }
+\end{tabularx}
+
+%Flight-Fury
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+  \textbf{RC Plane} & \hfill Flight-Fury $|$ Cognizance'23, IITR \\[2pt]
+  \multicolumn{2}{@{}X@{}}{
+  \begin{minipage}[t]{\linewidth}
+    \begin{itemize}
+      \item A custom RC plane based on the MIG-29, incorporating a single fan design and a payload bay. Designed a receiver using Arduino and NRF module and designed a custom PCB radio transmitter to control the plane.
+    \end{itemize}
+  \end{minipage}
+  }
+\end{tabularx}
+
+%LFR Maze
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+  \textbf{LFR Maze Solver} & \hfill LFR-Maze $|$ Enyugma'22, IIITBH \\[2pt]
+  \multicolumn{2}{@{}X@{}}{
+  \begin{minipage}[t]{\linewidth}
+    \begin{itemize}
+      \item A line-following robot using an Arduino microcontroller and pointers to manipulate memory, optimizing program speed and efficiency.
+      \item Developed an algorithm for the robot to navigate custom mazes, incorporating ultrasonic sensors to detect obstacles and make decisions at intersections, while simultaneously enhancing my skills in embedded systems programming and robotics.\vspace{0em}
+    \end{itemize}
+  \end{minipage}
+  }
+\end{tabularx}
+
+%SIH 2022
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+  \textbf{Smart Bed Management System} & \hfill MEDievals $|$ SIH'22 \\[2pt]
+  \multicolumn{2}{@{}X@{}}{
+  \begin{minipage}[t]{\linewidth}
+    \begin{itemize}
+      \item Our project aims to improve hospital bed management through an online platform that allows patients to check bed availability, book appointments with doctors, and reserve beds in advance.
+      \item By electronically detecting bed occupancy and providing real-time updates, our platform helps hospitals optimize their bed allocation and reduce patient waiting times.
+    \end{itemize}
+  \end{minipage}
+  }
+\end{tabularx}
+
+%Technical Skills
+\section{Technical Skills}
+\begin{tblr}{
+    cell{1}{1} = {t},
+  }
+  \textbf{Language}            & {\textbf{Fluent} in C++/C, Python, HTML \& CSS               \\\textbf{Familiar} with Java, JavaScript} \\
+  \textbf{Tools \& Frameworks} & GitHub, \LaTeX, Visual Studio, Jupyter                        \\
+  \textbf{Softwares}           & Fusion 360, Figma, MS-Office, NI Multisim, Ansys, MSC Adams, Qiskit
+\end{tblr}
+
+%Key Courses
+\section{Key Courses}
+\begin{tblr}{
+    cell{1}{1} = {t},
+    cell{2}{1} = {t},
+    cell{3}{1} = {t},}
+  \textbf{Mechanical Engg.}    & {Thermodynamics, Design \& Manufacturing Science, \\Engineering Mechanics, Kinematics of Machine, Fluid Mechanics} \\
+  \textbf{Electrical Science}  & {Circuit Theory and Electronics, Analog \& Digital Electronics         \\Electrical Machines} \\
+  \textbf{Computer Science}    & {Programming Fundamentals,~Object Oriented Programming,                      \\Data Structures and Algorithms,~Database Management Systems} \\
+  \textbf{Mathematics}         & Linear Algebra, Calculus, Differential Equations, Probability and Statistics \\
+  \textbf{Professional Skills} & Professional Communication, Management Concepts and Technology
+\end{tblr}
+
+%POR
+\section{Positions of Responsibility}
+\begin{itemize}
+\item \textbf{Training and Placement Cell Coordinator}, Mechatronics Engineering \hfill \textit{Dec'22-Present} \vspace{-0.5em}
+\item \textbf{Electronics In-Charge}, REC (Robotics \& Electronics Club) \hfill \textit{Mar'22-Present} \vspace{-0.5em}
+\item \textbf{Co-Founder}, Quantum Computing Research Society \vspace{-0.5em}
+\item \textbf{Member}, IEEE Robotics and Automation Society (RAS) \vspace{-0.5em}
+\item \textbf{Design and Media Team} Member, \textbf{Art Decor Team} Lead, \textbf{Enyugma'22} \hfill \textit{Oct-Dec'22} \vspace{-0.5em}
+\item \textbf{Igniter}, Unstop Igniter Club (Formerly {D$_{2_C}$}, Dare2Compete) \hfill \textit{Apr'22-Apr'23} \vspace{-0.5em}
+\end{itemize}
+
+%Achievements
+\section{Achievements}
+\begin{itemize}
+\item Received \textbf{Chanakya UG Fellowship} from \textbf{iHUB DivyaSampark, IIT Roorkee}, demonstrating excellence and potential in the field of \textbf{Robotics}.\vspace{-0.5em}
+\item Our Team \textbf{RED} secured \textbf{2nd Runner-Up} in \textbf{Probozance} at \textbf{Cognizance'23, IIT-R}.\vspace{-0.5em}
+  \item Our Team \textbf{RED} achieved \textbf{1st Runner-Up} in \textbf{RoboQuest} at \textbf{Amalthea'22, IIT-GN}.\vspace{-0.5em}
+  \item Our Team secured \textbf{1st Runner-Up} in \textbf{LFR Maze} at \textbf{Enyugma'22, IIIT-BH}.\vspace{-0.5em}
+  \item Institute-level \textbf{SIH'22}, \textbf{Top 12} with \textbf{Smart Bed Management System} in 36-hr hackathon.\vspace{-0.5em}
+\end{itemize}
+
+%Extras
+\section{Extracurriculars}
+\begin{itemize}
+  \item Member of the \textbf{Design Team} and \textbf{Photography club ``Reflection"}.\vspace{-0.5em}
+  \item \textbf{Calligraphy enthusiast}, constantly exploring new techniques to improve handwriting skills. \vspace{-0.5em}
+  \item \textbf{Enthusiastic} about \textbf{computer hardware} and software, eager to experiment with new technologies.\vspace{-0.5em}
+\end{itemize}
+
+%end
+\vfill
+\center{\footnotesize Last updated: \today}
+\end{document}
