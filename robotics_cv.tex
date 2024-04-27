@@ -1,0 +1,109 @@
+%-------------------------
+% LaTeX CV Template
+% Author: Shrijal
+% License: MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% Packages
+\usepackage{url}
+\usepackage{parskip} 
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[unicode, draft=false]{hyperref}
+\usepackage{fontawesome5}
+
+% Setup hyperref package, and colors for links
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+% Title formatting
+\titleformat{\section}{\scshape\raggedright\large\color{MidnightBlue}}{}{0em}{}[\color{black}\titlerule]
+\titlespacing{\section}{0pt}{8pt}{6pt}
+
+% Non-numbered pages
+\pagestyle{empty}
+
+\begin{document}
+
+% Headline
+\begin{center}
+    {\Huge \scshape Shrijal} \\[4pt]
+    \textit{Future Robot Overlord (in Training)} \\[4pt]
+    \href{tel:9835631444}{\color{MidnightBlue}\raisebox{-0.2\height}\faMobile\ 
+    \underline {+91 9835631444}} ~
+    \href{mailto:shrijal2410@gmail.com}{\color{MidnightBlue}\raisebox{-0.2\height}\faEnvelope\ \underline{shrijal2410@gmail.com}} ~ 
+    \href{https://github.com/Shrijal2410}{\color{MidnightBlue}\raisebox{-0.2\height}\faGithub\ \underline{Shrijal2410}} ~
+    \href{https://www.linkedin.com/in/shrijal2410/}{\color{MidnightBlue}\raisebox{-0.2\height}\faLinkedin\ \underline{Shrijal}}
+\end{center}
+
+\vspace{-8pt}
+
+% Education
+\section{Education}
+\textbf{Indian Institute of Information Technology, Bhagalpur} \hfill \textit{2021-25} \\
+Bachelor of Technology in Mechatronics \& Automation Engineering \hfill \textit{CGPA: 7.98}
+
+% Experience
+\section{Experience}
+\textbf{Mechanical Intern} - Tata Steel, Jamshedpur $|$ \emph{\color{MidnightBlue} \href{https://drive.google.com/drive/folders/1rY0DQPOfQauNFIIv6MC20OoaCbj5MJas?usp=sharing}{\faGoogleDrive{}}} \hfill Jun-July'23 \\
+\textit{Focused on Steel Making, Heat Exchangers, and Thermal Analysis}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=-2pt]
+  \item Enhanced \textbf{Fin Fan Cooler (FFC)} system, achieving 30\% increased airflow and 4°C water temperature reduction.
+  \item Analyzed steelmaking \textbf{blow interruptions}, correlating disruptions with production, achieving a \textbf{64.5\% decrease}.
+  \item Proposed \textbf{water mist aid}, showcasing an \textbf{18°C temperature reduction} potential via CFD modeling.
+\end{itemize}
+
+% Projects
+\section{Projects}
+
+% Arm
+\textbf{{\color{MidnightBlue} \underline{Robotic Arm}}} \hfill Dec'22-Present
+\begin{itemize}[leftmargin=*,noitemsep,topsep=-2pt]
+  \item Designed versatile manipulators with \href{https://github.com/TeamRED-iiitbh/6-Axis-RoboArm}{6-DOF Articulated} and \href{https://github.com/TeamRED-iiitbh/Cartesian-Manipulator}{3-DOF Cartesian} setups in \textbf{SolidWorks}.
+  \item Manufactured manipulators with \textbf{Creality Slicer} for 3D printing and hand tools.
+  \item Engineered in-house electronics subsystems, developing PCBs in \textbf{KiCad}, creating circuit diagrams with \textbf{Fritzing}, and integrating autonomous motion control using \textbf{GRBL} firmware.
+\end{itemize}
+
+\vspace{4pt}
+
+% Drone
+\textbf{{\color{MidnightBlue} \underline{Autonomous Drone}}} $|$ \emph{\color{MidnightBlue} \href{https://github.com/TeamRED-iiitbh/Autonomous-Drone}{\faGithub{}}} \hfill June'23-Present
+\begin{itemize}[leftmargin=*,noitemsep,topsep=-2pt]
+  \item Developed algorithms for path planning, geo-fencing, and optimal flight height calculation, validated via thorough testing with \textbf{MAVSDK} and \textbf{Ardupilot SITL} Simulator (Software in the Loop).
+  \item Developed a \textbf{ship detection and classification system} using \textbf{YOLO v8} \& \textbf{CNN}, combining geotagged image analysis with Haversine distance calculation for precise shipyard encroachment detection.
+  \item Integrated algorithms into \textbf{QGroundControl (QGC)} and \textbf{Pixhawk} controller for seamless autonomous flight.
+\end{itemize}
+
+% Skills
+\section{Skills}
+\textbf{Programming}: C++, Python, JavaScript, Arduino, MicroPython \\
+\textbf{Tools \& Frameworks}: GitHub, \LaTeX, Conda, ROS Noetic \\
+\textbf{Software}: Fusion 360, SolidWorks, KiCad, NI Multisim, ANSYS\\
+\textbf{Manufacturing}: 3D Printing (Creality Slicer), Wire EDM, PCB Fabrication (LPKF CircuitPro PM) \\
+\textbf{Scripting}: Bash, Command Prompt \\
+\textbf{Coursework}: AI \& Machine Learning, IoT and Embedded Systems, Control Systems, Sensors and Actuators, Analog Electronics and Digital Signal Processing, MEMS and NEMS
+
+% POR
+\section{Responsibilities}
+\begin{itemize}[leftmargin=0.5cm, noitemsep]
+\item \textbf{Training and Placement Cell Coordinator}, Mechatronics Engineering \hfill \textit{Dec'22-Present}
+\item \textbf{Electronics In-Charge}, REC (Robotics \& Electronics Club) \hfill \textit{Mar'22-Apr'23}
+\item \textbf{IEEE Robotics and Automation Society (RAS)} Member
+\end{itemize}
+
+% Achievements
+\section{Achievements}
+\begin{itemize}[leftmargin=0.5cm, noitemsep]
+\item Currently Ranked \textbf{Top 150} in ISRO Robotics Challenge-URSC 2024 (IRoC-U 2024) for autonomous rover design.
+\item Awarded \textbf{Chanakya UG Fellowship} by iHUB DivyaSampark, IIT Roorkee, for excellence in \textbf{Robotics}.
+\item Consistently excelled in institute-level \textbf{Smart India Hackathons (SIH)}, \\ \textbf{Ranked 2nd in 2023} for Autonomous Drone Detection and \textbf{12th in 2022} for Smart Bed Management.
+\item Achieved \textbf{2nd Runner-Up} position with Team RED in Probozance at \textbf{Cognizance’23, IIT-R}.
+\item Secured \textbf{1st Runner-Up} position with Team RED in RoboQuest at \textbf{Amalthea’22, IIT-GN}.
+\end{itemize}
+
+\end{document}
